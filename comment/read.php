@@ -9,7 +9,7 @@ $sql = "SELECT * FROM comment
         ";
 $result = $connect->query($sql);
 
-if($result->num_row > 0) {
+if(mysqli_num_rows($result) > 0) {
     $data = array();
     while ($get_row = $result->fetch_assoc()) {
         $from_id_user = $get_row['from_id_user'];

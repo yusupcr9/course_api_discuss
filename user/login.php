@@ -10,7 +10,7 @@ $sql = "SELECT * FROM user
     ";
 $result = $connect->query($sql);
 
-if($result->num_row > 0){
+if(mysqli_num_rows($result) > 0){
     $data = array();
     while($get_row = $result->fetch_assoc()){
         $data[] = $get_row;

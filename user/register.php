@@ -8,7 +8,7 @@ $password = md5($_POST['password']);
 $sql_check_username = "SELECT * FROM user WHERE username = '$username'";
 $result_check_username = $connect->query($sql_check_username);
 
-if($result_check_username->num_rows>0){
+if(mysqli_num_rows($result_check_username)>0){
     echo json_encode(array(
         "success" => false,
         "message" => "username"

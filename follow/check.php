@@ -11,7 +11,7 @@ $sql = "SELECT * FROM follow
         ";
 $result = $connect->query($sql);
 
-if($result->num_rows > 0 ){
+if(mysqli_num_rows($result) > 0 ){
     echo json_encode(array(
         "success":true
     ));

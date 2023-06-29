@@ -22,8 +22,8 @@ $sql_following = "SELECT id FROM follow
 $result_following = $connect->query($sql_following);
 
 echo json_encode(array(
-    "topic" => floatval($result_topic->num_rows),
-    "follower" => floatval($result_follower->num_rows),
-    "following" => floatval($result_following->num_rows),
+    "topic" => floatval(mysqli_num_rows($result_topic)),
+    "follower" => floatval(mysqli_num_rows($result_follower)),
+    "following" => floatval(mysqli_num_rows($result_following)),
 ));
 ?>

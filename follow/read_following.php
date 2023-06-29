@@ -9,7 +9,7 @@ $sql = "SELECT * FROM follow
     ";
 $result = $connect->query($sql);
 
-if($result->num_rows>0){
+if(mysqli_num_rows($result)>0){
     $data = array();
     while ($row_follower = $result->fetch_assoc()){
         $id_following = $row_follower["to_id_user"];

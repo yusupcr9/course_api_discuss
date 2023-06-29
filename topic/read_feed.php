@@ -13,7 +13,7 @@ $sql = "SELECT * FROM topic
         ";
 $result = $connect->query($sql);
 
-if($result->num_rows > 0 ){
+if(mysqli_num_rows($result) > 0 ){
     $data = array();
     while($get_row = $result->fetch_assoc()){
         $id_user = $get_row["id_user"];
